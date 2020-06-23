@@ -1,0 +1,54 @@
+<html lang="ru">
+	<head>
+	<title>Canvas & Mootools</title>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script>
+	<script src="src/muv.js" type="text/javascript"></script>
+	<style type="text/css">
+		canvas { border: 1px solid white; }
+	</style>
+	</head>
+
+	<body onload="init();">
+				<canvas id="canvas" width="600" height="400" onclick="goInput(event);">
+				</canvas>
+				<form>
+						<input type = "button" value = "Move" onclick="move()">
+						<input  type = "button" value = "Stop" onclick="clearInterval(idTimer);">
+					<h4 class="h_speed">Speed Changer</h4>
+					<div class="speed" id="speed">
+						<input type="button"  value="Faster" onclick="faster();">
+						<input type="button" value="Slower" onclick="slower();">
+					</div>
+ 				</form>
+		<form>
+			<h3>Direction Changer</h3>
+			<div class="moves" data-toggle="buttons" id="directions">
+					<label class="btn active">
+						<input type="radio" name="options" value="up" checked> up
+					</label>
+					<label class="btn">
+						<input type="radio" name="options" value="left"> left
+					</label>
+					<label class="btn">
+						<input type="radio" name="options" value="down"> down
+					</label>
+					<label class="btn">
+						<input type="radio" name="options" value="right"> right
+					</label>
+					<label class="btn">
+						<input type="radio" name="options" value="random"> random
+					</label>
+					<label class="btn">
+						<input type="radio" name="options" value="chaos"> chaos
+					</label>
+			</div>
+		</form>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	</body>
+</html>
